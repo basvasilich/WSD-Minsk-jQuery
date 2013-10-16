@@ -70,52 +70,24 @@
     <h2>Как это было...</h2>
 </section>
 
-
-<section>
-    <h2>1995</h2>
-
-    <p>Pre DHTML</p>
-</section>
-
-<section>
-    <h2>Пример кода</h2>
-</section>
-
-
-<section>
-    <h2>1996</h2>
-
-    <p>DHTML</p>
-</section>
-
-<section>
-    <h2>Пример кода</h2>
-</section>
-
 <section>
     <h2>2004</h2>
 
     <p>Я пришел в индустрию</p>
 </section>
+<section data-background="assets/pic1.png"></section>
 
 <section>
     <h2>2006</h2>
 
     <p>Prototype, Script.aculo.us, jQuery</p>
 </section>
-
-<section>
-    <h2>Пример кода</h2>
-</section>
-
+<section data-background="assets/pic2.png"></section>
+<section data-background="assets/pic3.gif"></section>
 
 <section>
     <section>
-        <h2>jQuery</h2>
-    </section>
-
-    <section>
-        <h2>Для чего мы начинаем использовать jQuery?</h2>
+        <h2>Для чего нужен был jQuery?</h2>
     </section>
 
     <section>
@@ -123,7 +95,7 @@
             <li>DOM</li>
             <li>Ajax</li>
             <li>Events</li>
-            <li>Animation</li>
+            <li>Animations</li>
         </ul>
     </section>
 
@@ -132,85 +104,110 @@
     </section>
 
     <section>
-        <h2>Кажется теперь я знаю <s>javascript</s></h2>
+        <h2>jQuery == javascript</h2>
+
+        <p>только лучше</p>
     </section>
 
     <section>
-        <h2>Теперь я знаю <s>как делать веб</s></h2>
+        <h2>Теперь я знал <br /><s>как делать веб</s></h2>
     </section>
-</section>
-
-<section>
-    <h2>2007</h2>
-
-    <p>Книга Pro JavaScript Design Patterns</p>
-</section>
-
-<section>
-    <h2>2008</h2>
-
-    <p>Книга Javascript: Good parts</p>
 </section>
 <section>
     <section>
-        <h2>2009 - ...</h2>
-
-        <p>Современный веб</p>
+        <h2>Но веб пошел дальше</h2>
     </section>
     <section>
-        <h2>RIA</h2>
+        <ul>
+            <li>2007 — Книга «Pro JavaScript Design Patterns»</li>
+            <li>2008 — Книга «Javascript: Good parts»</li>
+            <li>2009 — node.js, PhoneGap</li>
+        </ul>
     </section>
-
     <section>
-        <h2>2009</h2>
-
-        <p>node.js, PhoneGap</p>
+        <ul>
+            <li>2010 — backbone.js, angular.js</li>
+            <li>2013 — http://extensiblewebmanifesto.org</li>
+            <li>2013 — asm.js</li>
+        </ul>
     </section>
-
     <section>
-        <h2>2010</h2>
-
-        <p>backbone.js, angular.js</p>
+        <ul>
+            <li>Rich Internet Applications</li>
+            <li>Single Page Applications</li>
+        </ul>
     </section>
 
-    <section>
-        <h2>2013</h2>
+</section>
 
-        <p>http://extensiblewebmanifesto.org</p>
+<section>
 
-        <p>asm.js</p>
-    </section>
     <section>
         <h2>Javascript развивается</h2>
     </section>
     <section>
-        <h2>EcmaScript 5</h2>
-    </section>
-    <section>
-        <h2>EcmaScript 6</h2>
+        <h2>.querySelectorAll()</h2>
+<pre><code class="JavaScript" data-trim contenteditable
+style="font-size: 28px; padding: 40px; margin-top: 20px;"> var $ = document.querySelectorAll.bind(document);
+
+Element.prototype.on = Element.prototype.addEventListener;
+
+$('#somelink')[0].on('touchstart', handleTouch)</code></pre>
     </section>
 
     <section>
-        <h2>Уже есть</h2>
-        <ul>
-            <li>Javascript — document.querySelectorAll()</li>
-            <li>Javascript — element.addEventListener()</li>
-            <li>Javascript — element.classList.add()</li>
-            <li>Javascript — var new XMLHttpRequest()</li>
-            <li>CSS — Transitions, Animation</li>
-        </ul>
-    </section>
+        <h2>.classList</h2>
+<pre><code class="JavaScript" data-trim contenteditable
+style="font-size: 28px; padding: 40px; margin-top: 20px;"> $('body').addClass('hasJS');
 
-    <section>
-        <h2>Пример кода про DOM</h2>
-    </section>
+document.body.classList.add('hasJS');
 
-    <section>
-        <h2>Пример кода про Events</h2>
-    </section>
+$('body').removeClass('hasJS');
 
+document.body.classList.remove('hasJS');</code></pre>
+    </section>
     <section>
-        <h2>Пример кода про Class</h2>
+        <h2>.classList</h2>
+<pre><code class="JavaScript" data-trim contenteditable
+style="font-size: 28px; padding: 40px; margin-top: 20px;"> $('body').toggleClass('hasJS');
+
+document.body.classList.toggle('hasJS');
+
+$('body').hasClass('hasJS');
+
+document.body.classList.contains('hasJS');</code></pre>
+    </section>
+    <section>
+        <h2>.dataset</h2>
+        <pre><code class="JavaScript" data-trim contenteditable
+                style="font-size: 28px; padding: 40px; margin-top: 20px;">
+element.dataset.user = JSON.stringify(user);
+element.dataset.score = score;</code></pre>
+    </section>
+    <section>
+        <h4>Ajax</h4>
+        <pre><code class="JavaScript" data-trim contenteditable
+                style="font-size: 18px; max-height: 700px; padding: 10px 20px; margin-top: 10px;">
+function request(type, url, opts, callback) {
+    var xhr = new XMLHttpRequest(), var fd;
+    if (typeof opts === 'function') {
+        callback = opts;
+        opts = null;
+    }
+    xhr.open(type, url);
+    if (type === 'POST' && opts) {
+        fd = new FormData();
+        for (var key in opts) {
+            fd.append(key, JSON.stringify(opts[key]));
+        }
+    }
+    xhr.onload = function () {
+        callback(JSON.parse(xhr.response));
+    };
+    xhr.send(opts ? fd : null);
+}
+var get = request.bind(this, 'GET');
+var post = request.bind(this, 'POST');</code></pre>
     </section>
 </section>
 
@@ -222,6 +219,9 @@
         <h3>Он рассказывает<br/>как использовать полифилы <br/>и придумывать свои велосипеды?!</h3>
     </section>
     <section>
+        <h3>Нам надо отказаться от jQuery?! Зачем?!</h3>
+    </section>
+    <section>
         <h3>Иди домой, ты пьян!</h3>
         <ul>
             <li>jQuery и сейчас мощный инструмент</li>
@@ -231,7 +231,10 @@
         </ul>
     </section>
 </section>
-
+<section data-background="assets/pic4.jpg"></section>
+<section>
+    <h2>Использовать jQuery осмысленно.</h2>
+</section>
 <section>
     <section>
         <h2>Веб сильно изменился<br/>за последние 5 лет</h2>
@@ -252,31 +255,46 @@
 
 <section>
     <section>
-        <h2>Вы умеете jQuery</h2>
+        <h2>Ок, вы умеете jQuery</h2>
     </section>
     <section>
-        <h2>Знаете ли вы javascript?</h2>
+        <h2>Но, знаете ли вы javascript?</h2>
     </section>
 
     <section>
-        <h2>Полноценный язык программирования</h2>
+        <ul>
+            <li>Анонимные функции</li>
+            <li>Функция — first class object</li>
+            <li>Паттерны ООП</li>
+            <li>Функциональный подход</li>
+        </ul>
     </section>
-
     <section>
-        <h2>Анонимные функции</h2>
+        <ul>
+            <li>Контекст выполнения функции</li>
+            <li>Прототипное наследование</li>
+            <li>События</li>
+        </ul>
     </section>
-
     <section>
-        <h2>Функция — first class object</h2>
-    </section>
+        <pre><code class="JavaScript" data-trim contenteditable
+        style="font-size: 28px; padding: 40px; margin-top: 20px;">
+var obj = {};
+var foo = function() {
+    (function() {
+        console.log(this);
+    })();
+}
 
-    <section>
-        <h2>Паттерны ООП</h2>
+obj.foo = foo;
+obj.foo(); // ???</code></pre>
     </section>
-
     <section>
-        <h2>Функциональный подход</h2>
-    </section>
+            <pre><code class="JavaScript" data-trim contenteditable
+            style="font-size: 28px; padding: 40px; margin-top: 20px;">
+typeof (function(){})() // ???
+</code></pre>
+        </section>
 </section>
 <section>
     <section>
@@ -286,11 +304,14 @@
         <h2>Осознать что javascript<br/>это сильно больше<br/>чем jQuery</h2>
     </section>
     <section>
-        <h2>Прочитать и осознать 3 книги*</h2>
+        <h2>Прочитать и осознать 4 книги*</h2>
         <ul>
-            <li>Good parts</li>
-            <li>Pro JavaScript Design Patterns</li>
-            <li>Design Patterns: Elements of Reusable Object-Oriented Software</li>
+            <li>«<a href="http://www.ozon.ru/context/detail/id/20217226/">JavaScript. Сильные стороны</a>»</li>
+            <li>«<a href="http://www.ozon.ru/context/detail/id/6287517/">JavaScript. Шаблоны</a>»</li>
+            <li>«<a href="http://www.amazon.com/Pro-JavaScript-Design-Patterns-Object-Oriented/dp/159059908X/">Pro JavaScript Design Patterns</a>»
+            </li>
+            <li>«<a href="http://www.ozon.ru/context/detail/id/2457392/">Приемы объектно-ориентированного проектирования. Паттерны проектирования</a>»
+            </li>
         </ul>
         <p>
             <small>* — это лично мой список, наверное вы знаете лучше</small>
@@ -298,30 +319,26 @@
     </section>
 
     <section>
-        <h2>Освободиться от зависимости</h2>
-    </section>
-
-    <section>
         <h2>Проанализировать для чего используется jQuery на ваших проектах</h2>
     </section>
     <section>
         <h2>Использовать jQuery как библиотеку</h2>
-
-        <p>Библиотека легко заменяется</p>
-    </section>
-    <section>
-        <h2>... или не jQuery</h2>
-
-        <p>zepto.js</p>
-
-        <p>http://microjs.com/</p>
-    </section>
-    <section>
-        <h2>Посмотрите вокруг</h2>
         <ul>
-            <li>Что у вас спрашивают на интервью?</li>
-            <li>Что вы спрашивайте на интервью?</li>
+            <li>Побороть вредную привычку<br/> использовать jQuery везде</li>
+            <li>Сделать библиотеку легко заменяемой</li>
         </ul>
+    </section>
+    <section>
+        <h2>... или<br /> не использовать jQuery</h2>
+
+        <p>Там где нет в этом необходимости</p>
+        <ul>
+            <li><a href="http://zeptojs.com//">zepto.js</a></li>
+            <li><a href="http://microjs.com/">microjs.com</a></li>
+        </ul>
+    </section>
+    <section>
+        <h2>Посмотреть вокруг</h2>
     </section>
 </section>
 <section>
@@ -353,7 +370,7 @@
         width: 1100,
         height: 800,
 
-        theme: 'serif', // available themes are in /css/theme
+
         transition: 'zoom', // default/cube/page/concave/zoom/linear/fade/none
 
         // Optional libraries used to extend on reveal.js
@@ -361,21 +378,13 @@
             { src: 'lib/js/classList.js', condition: function () {
                 return !document.body.classList;
             } },
-            { src: 'plugin/markdown/marked.js', condition: function () {
-                return !!document.querySelector('[data-markdown]');
-            } },
-            { src: 'plugin/markdown/markdown.js', condition: function () {
-                return !!document.querySelector('[data-markdown]');
-            } },
             { src: 'plugin/highlight/highlight.js', async: true, callback: function () {
                 hljs.initHighlightingOnLoad();
             } },
             { src: 'plugin/zoom-js/zoom.js', async: true, condition: function () {
                 return !!document.body.classList;
             } },
-            { src: 'plugin/notes/notes.js', async: true, condition: function () {
-                return !!document.body.classList;
-            } }
+
         ]
     });
 
