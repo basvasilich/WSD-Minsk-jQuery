@@ -166,9 +166,11 @@
     <section>
         <h2>.querySelectorAll()</h2>
 <pre><code class="JavaScript" data-trim contenteditable
-style="font-size: 22px; padding: 40px; margin-top: 20px;"> var $ = document.querySelectorAll.bind(document);
+style="font-size: 30px; padding: 40px; margin-top: 20px;"> var $ = document.querySelectorAll.bind(document);
+
 
 Element.prototype.on = Element.prototype.addEventListener;
+
 
 $('#somelink')[0].on('touchstart', handleTouch)</code></pre>
     </section>
@@ -176,7 +178,7 @@ $('#somelink')[0].on('touchstart', handleTouch)</code></pre>
     <section>
         <h2>.classList</h2>
 <pre><code class="JavaScript" data-trim contenteditable
-style="font-size: 28px; padding: 40px; margin-top: 20px;"> $('body').addClass('hasJS');
+style="font-size: 30px; padding: 40px; margin-top: 20px;"> $('body').addClass('hasJS');
 
 document.body.classList.add('hasJS');
 
@@ -185,22 +187,12 @@ $('body').removeClass('hasJS');
 document.body.classList.remove('hasJS');</code></pre>
     </section>
     <section>
-        <h2>.classList</h2>
-<pre><code class="JavaScript" data-trim contenteditable
-style="font-size: 28px; padding: 40px; margin-top: 20px;"> $('body').toggleClass('hasJS');
-
-document.body.classList.toggle('hasJS');
-
-$('body').hasClass('hasJS');
-
-document.body.classList.contains('hasJS');</code></pre>
-    </section>
-    <section>
         <h2>.dataset</h2>
         <pre><code class="JavaScript" data-trim contenteditable
-                style="font-size: 28px; padding: 40px; margin-top: 20px;">
-element.dataset.user = JSON.stringify(user);
-element.dataset.score = score;</code></pre>
+                style="font-size: 30px; padding: 40px; margin-top: 20px;">element.dataset.user = JSON.stringify(user);
+
+element.dataset.score = score;
+        </code></pre>
     </section>
     <section>
         <h4>Ajax</h4>
@@ -252,6 +244,9 @@ var post = request.bind(this, 'POST');</code></pre>
 <section data-background="assets/pic6.png"></section>
 <section data-background="assets/pic4.jpg"></section>
 <section>
+    <h2>Использовать jQuery осмысленно</h2>
+</section>
+<section>
     <section>
         <h2>Яндекс</h2>
         <ul>
@@ -267,9 +262,6 @@ var post = request.bind(this, 'POST');</code></pre>
             <li>На собеседованиях спрашиваем про нативный JavaScript</li>
         </ul>
     </section>
-</section>
-<section>
-    <h2>Использовать jQuery осмысленно</h2>
 </section>
 <section>
     <section>
@@ -291,7 +283,6 @@ var post = request.bind(this, 'POST');</code></pre>
         </ul>
     </section>
 </section>
-
 <section>
     <section>
         <h2>Ок, вы все умеете jQuery</h2>
